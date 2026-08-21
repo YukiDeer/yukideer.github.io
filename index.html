@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C:\YukiDeer</title>
+    <!-- 
+        Windows 98 Style Website Template
+        Based on the original Windows template from HTML5-Templates.com
+        Original: https://html5-templates.com/preview/windows.html
+    -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- DESKTOP BACKGROUND -->
+    <div id="desktop" class="crt-effect">
+        
+        <!-- DESKTOP ICONS -->
+        <div class="desktop-icons">
+            <!-- Icon 1: About -->
+            <div class="icon" onclick="openWindow('about')">
+                <div class="icon-image">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span class="icon-text">About Me</span>
+            </div>
+
+            <!-- Icon 2: Projects -->
+            <div class="icon" onclick="openWindow('projects')">
+                <div class="icon-image">
+                    <i class="fas fa-folder"></i>
+                </div>
+                <span class="icon-text">My Projects</span>
+            </div>
+
+            <!-- Icon 3: Notepad -->
+            <div class="icon" onclick="openWindow('notepad')">
+                <div class="icon-image">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <span class="icon-text">Notepad</span>
+            </div>
+        </div>
+
+        <div class="recycle-bin" aria-hidden="true">
+            <div class="icon-image">
+                <i class="fas fa-trash-can"></i>
+            </div>
+            <span class="icon-text">Recycle Bin</span>
+        </div>
+
+        <!-- WINDOWS -->
+
+        <!-- Announcement Window -->
+        <div class="window announcement-window" id="announcement-window" style="width: 450px; height: 350px;">
+            <div class="window-header">
+                <span class="window-title"><i class="fas fa-bullhorn"> </i> Announcement</span>
+                <div class="window-controls">
+                    <a href="#" class="window-button close-btn" onclick="closeWindow('announcement'); return false;">×</a>
+                </div>
+            </div>
+            <div class="window-content announcement-content">
+                <p><strong>Yuki is searching for work within IT Support in European Union.</strong></p>
+                <p>Can help? Contact her via Signal.</p>
+                <br>
+                <div class="center">
+                    <img class="signal-qr-code" src="img/signal-username-qr-code.png" alt="Signal QR Code">
+                </div>
+            </div>
+        </div>
+        
+        <!-- About Window -->
+        <div class="window" id="about-window" style="top: 50px; left: 100px; width: 450px; height: 400px;">
+            <div class="window-header">
+                <span class="window-title"><i class="fas fa-user"> </i> About Me</span>
+                <div class="window-controls">
+                    <a href="#" class="window-button minimize-btn" onclick="minimizeWindow('about')">_</a>
+                    <a href="#" class="window-button maximize-btn" onclick="maximizeWindow('about')">□</a>
+                    <a href="#" class="window-button close-btn" onclick="closeWindow('about')">×</a>
+                </div>
+            </div>
+            <div class="window-content">
+                <h3>Welcome to the YukiDeer Zone!</h3>
+                <p>This small portfolio website showcases my work and skills in a nostalgic 1998 style.</p>
+                <br>
+                <p><strong>Who is YukiDeer?</strong></p>
+                <br>
+                <p>Yuki (she/her) is a proud furry and trans woman who is passionate about technology, open-source and humanitarian work.</p>
+                <p>Currently volunteers at FUR/HELP as a founder and ambassador and proudly jobless. Thanks AI.</p>
+                <br>
+                <p><strong>Yuki's Experience</strong></p>
+                <br>
+                <p>2022-2024 -- IT Support Specialist for various companies (startups and enterprises)</p>
+                <p>2022-present -- Founder and Ambassador at FUR/HELP</p>
+                <br>
+                <p><strong>The website is still under development. So expect things to change!</strong></p>
+                <br>
+                <p><strong>My social links:</strong></p>
+                <ul>
+                    <li><a href="https://furry.engineer/@YukiDeer" target="_blank">Mastodon</a></li>
+                    <li><a href="https://bsky.app/profile/yukideer.gay" target="_blank">Bluesky</a></li>
+                    <li><a href="https://github.com/yukideer" target="_blank">GitHub</a></li>
+                </ul>
+                <br>
+                <p><strong>Want to support my work?</strong></p>
+                <p>You can support me on <a href="https://ko-fi.com/yukideer" target="_blank">Ko-fi</a>.</p>
+                <br>
+                <p>Special thanks to <a href="https://github.com/pollygon-dev" target="_blank">pollygon-dev</a> for the template!</p>
+            </div>
+        </div>
+
+        <!-- Projects Window -->
+        <div class="window" id="projects-window" style="top: 80px; left: 150px; width: 500px; height: 400px;">
+            <div class="window-header">
+                <span class="window-title"><i class="fas fa-folder"> </i> My Projects</span>
+                <div class="window-controls">
+                    <a href="#" class="window-button minimize-btn" onclick="minimizeWindow('projects')">_</a>
+                    <a href="#" class="window-button maximize-btn" onclick="maximizeWindow('projects')">□</a>
+                    <a href="#" class="window-button close-btn" onclick="closeWindow('projects')">×</a>
+                </div>
+            </div>
+            <div class="window-content">
+                <h3>What's YukiDeer up to these days?</h3>
+                <br>
+                <p><strong>Here are some of the projects I've been working on:</strong></p>
+                <br>
+                <ul>
+                    <li><strong>CaseWork</strong></li>
+                    <p>A fully encrypted open-source suite to manage humanitarian cases as part of the FUR/HELP initiative.</p>
+                    <br>
+                    <li><strong>FUR/HELP Infrastructure and Website</strong></li>
+                    <p>I maintain the infrastructure and website for the FUR/HELP initiative as it's founder. Basically most of my time is spent on this.</p>
+                    <br>
+                    <li>and many more projects to come...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Notepad Window -->
+        <div class="window" id="notepad-window" style="top: 140px; left: 250px; width: 400px; height: 300px;">
+            <div class="window-header">
+                <span class="window-title"><i class="fas fa-edit"> </i> Untitled - Notepad</span>
+                <div class="window-controls">
+                    <a href="#" class="window-button minimize-btn" onclick="minimizeWindow('notepad')">_</a>
+                    <a href="#" class="window-button maximize-btn" onclick="maximizeWindow('notepad')">□</a>
+                    <a href="#" class="window-button close-btn" onclick="closeWindow('notepad')">×</a>
+                </div>
+            </div>
+            <div class="window-content" style="padding: 0;">
+                <textarea id="notepad-text" style="width: 100%; height: 100%; border: none; resize: none; font-family: 'Courier New', monospace; font-size: 11px; padding: 4px;" placeholder="Type your notes here...">Welcome to Notepad!
+
+This is a fully functional text editor window. You can:
+- Type and edit text
+- Use it for quick notes
+- Customize the content however you like
+
+Try typing something!</textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TASKBAR -->
+    <div class="taskbar">
+        <div class="start-button" onclick="toggleStartMenu()">
+            <i class="fas fa-snowflake"></i>
+            Start
+        </div>
+        
+        <div class="taskbar-items" id="taskbar-items">
+            <!-- Taskbar items will be added here dynamically -->
+        </div>
+
+        <div class="clock" id="clock-prefix" style="gap: 4px;">
+            Yuki's current time is:
+            <div id="clock" >
+            12:00 PM
+            </div>
+        </div>
+    </div>
+
+    <!-- START MENU -->
+    <div class="start-menu" id="start-menu">
+        <div class="start-menu-header">
+            <i class="fas fa-snowflake"></i>
+            YukiDeer 98
+        </div>
+        <div class="start-menu-items">
+            <div class="start-menu-item" onclick="openWindow('about')">
+                <i class="fas fa-user"></i>
+                About Me
+            </div>
+            <div class="start-menu-item" onclick="openWindow('projects')">
+                <i class="fas fa-folder"></i>
+                My Projects
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" onclick="openWindow('calculator')">
+                <i class="fas fa-calculator"></i>
+                Calculator
+            </div>
+            <div class="start-menu-item" onclick="openWindow('notepad')">
+                <i class="fas fa-edit"></i>
+                Notepad
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" onclick="showShutdownDialog()">
+                <i class="fas fa-power-off"></i>
+                Shut Down...
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
