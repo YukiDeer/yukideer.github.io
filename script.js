@@ -181,7 +181,12 @@ function closeStartMenu() {
 
 function showShutdownDialog() {
     closeStartMenu();
-    alert('Thanks for visiting my Windows 98 website!\n\nThis is just a demo shutdown dialog.');
+    openWindow('shutdown');
+}
+
+function shutdownWebsite() {
+    closeWindow('shutdown');
+    window.close();
 }
 
 function calcInput(value) {

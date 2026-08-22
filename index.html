@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Open Graph -->
     <meta property="og:title" content="YukiDeer's Zone">
     <meta property="og:description" content="YukiDeer's Personal Page">
@@ -171,6 +172,23 @@ Try typing something!</textarea>
             </div>
         </div>
 
+        <!-- Shutdown Confirmation Window -->
+        <div class="window shutdown-window" id="shutdown-window" style="top: 35vh; left: calc(50% - 225px); width: 450px; height: 150px; resize: none;">
+            <div class="window-header">
+                <span class="window-title"><i class="fas fa-power-off"> </i> Shut down YukiDeer 98</span>
+                <div class="window-controls">
+                    <a href="#" class="window-button close-btn" onclick="closeWindow('shutdown'); return false;">×</a>
+                </div>
+            </div>
+            <div class="window-content shutdown-content">
+                <p>Are you sure you want to turn off YukiDeer 98?</p>
+                <div class="center">
+                    <button type="button" class="dialog-button" onclick="shutdownWebsite()">OK</button>
+                    <button type="button" class="dialog-button" onclick="closeWindow('shutdown')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- TASKBAR -->
@@ -185,7 +203,7 @@ Try typing something!</textarea>
         </div>
 
         <div class="clock" id="clock-prefix" style="gap: 4px;">
-            Yuki's current time is:
+            Yuki's time is:
             <div id="clock" >
             12:00 PM
             </div>
@@ -208,10 +226,6 @@ Try typing something!</textarea>
                 My Projects
             </div>
             <div class="start-menu-separator"></div>
-            <div class="start-menu-item" onclick="openWindow('calculator')">
-                <i class="fas fa-calculator"></i>
-                Calculator
-            </div>
             <div class="start-menu-item" onclick="openWindow('notepad')">
                 <i class="fas fa-edit"></i>
                 Notepad
